@@ -1,0 +1,290 @@
+/*Svjetlo Svijeta Styles */
+* {
+  box-sizing: border-box;
+}
+body {
+  background-color: #6969ff;
+  background: url(images/svjetlosvijeta-background2.png) no-repeat;
+  background-position: center;
+  animation: fadeInAnimation ease 1s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+@keyframes fadeInAnimation {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*Container ::::::::::::::::::::::::::::::::::::::::::::::::::::::::*/
+.container {
+  display: flex;
+  flex-direction: column;
+  max-width: 1366px;
+  font-family: "League Spartan", sans-serif;
+  color: #faf8ff;
+  margin: 0 auto;
+}
+
+/*Title */
+.title {
+  text-align: center;
+  margin-top: 50px;
+}
+.main_title {
+  text-align: center;
+  font-size: 70px;
+  font-weight: 700;
+  margin: 20px;
+  transition-duration: 350ms;
+  text-shadow: 1px 1px 5px #fefedf;
+  /* Non selectable text */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.main_title:hover {
+  color: #b7ade4;
+  text-shadow: 2px 2px 5px #fefedf;
+}
+.main_title::selection {
+  background: transparent;
+}
+.sub_title {
+  text-align: center;
+  font-size: 30px;
+  margin: 10px;
+}
+
+/*Links ::::::::::::::::::::::::::::::::::::::::::::::::::: */
+.main_links {
+  text-align: center;
+  display: flex;
+  justify-content: space-evenly;
+  margin: 30px;
+}
+.link_big {
+  border: 5px solid;
+  background-color: #938bb7;
+  height: 200px;
+  width: 200px;
+  border-radius: 10px;
+  transition-duration: 550ms;
+  transition-property: border-radius, background, transform;
+  transition-timing-function: ease-in;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  /* Non selectable text */
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+
+.link_big_active {
+  color: #6969ff;
+  background-color: #fefedf;
+  border-radius: 50%;
+  font-size: 25px;
+  transform: rotate(360deg);
+}
+
+.link_big:hover {
+  border-color: #938bb7;
+  /* color: #6969ff;
+  background-color: #fefedf;
+  border-radius: 50%;
+  font-size: 25px;
+  transform: rotate(360deg); */
+}
+
+.link_big::selection {
+  background: transparent;
+}
+
+/* .link_style {
+  text-decoration: none;
+  color: #faf8ff;
+}
+.link_style:hover {
+  color: #6969ff;
+} */
+
+/* Content Tabs :::::::::::::::::::::::::::::::::::::*/
+
+.content_tabs {
+  display: flex;
+  align-items: stretch;
+  transition-duration: 250ms;
+}
+.content_expanded {
+  flex-grow: 3;
+  /* height: 400px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: left;
+  align-items: center;
+}
+.question_answer {
+  margin: 2px;
+  display: flex;
+  flex-direction: column;
+  border: 2px solid;
+  border-radius: 10px;
+  width: 90%;
+  background-color: #6969ff;
+}
+.question {
+  font-size: 16px;
+  padding: 10px;
+}
+
+.answer {
+  border-top: 2px solid;
+  font-size: 16px;
+  padding: 10px;
+  color: #938bb7;
+  background-color: #fefedf;
+  text-align: justify;
+}
+.content_list {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 300px;
+  min-width: 300px;
+}
+.topic_name {
+  width: 90%;
+  font-size: 22px;
+  padding: 20px;
+  border: 1px solid #938bb7;
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fefedf;
+  color: #938bb7;
+  transition-duration: 250ms;
+  user-select: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+}
+.topic_name::selection {
+  background: transparent;
+}
+.topic_name:hover {
+  background-color: #938bb7;
+  color: #faf8ff;
+}
+.topic_name_selected {
+  background-color: #faf8ff;
+}
+
+/*Bottom ::::::::::::::::::::::::::::::::::::::::::*/
+.impressum {
+  text-align: center;
+  border: solid;
+}
+
+.hidden {
+  display: none;
+}
+
+/*_______________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+_____________________________________Mobile______________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+_________________________________________________________________________________
+*/
+
+@media only screen and (max-width: 960px) {
+  .container {
+    max-width: 900px;
+    min-width: 360px;
+    margin: 0 auto;
+  }
+  .title {
+    margin-top: 25px;
+  }
+  .main_title {
+    text-align: center;
+    font-size: 45px;
+    font-weight: 700;
+    margin: 15px;
+  }
+  .sub_title {
+    text-align: center;
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  /* Main Links */
+  .main_links {
+    margin: 20px;
+    flex-wrap: wrap;
+  }
+
+  .link_big {
+    border: 3px solid;
+    background-color: #938bb7;
+    height: 100px;
+    width: 100px;
+    border-radius: 10px;
+    transition-duration: 550ms;
+    transition-property: border-radius, background, transform;
+    transition-timing-function: ease-in;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 16px;
+    margin: 10px;
+  }
+
+  .link_big_active {
+    color: #6969ff;
+    background-color: #fefedf;
+    border-radius: 50%;
+    font-size: 18px;
+    transform: rotate(360deg);
+  }
+
+  /* Content TABS */
+  .content_tabs {
+    flex-direction: column;
+  }
+  .content_list {
+    flex-grow: initial;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 320px;
+    margin: 0px auto;
+  }
+  .topic_name {
+    width: 90%;
+    font-size: 16px;
+    padding: 5px;
+    border: 1px solid #938bb7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #938bb7;
+    transition-duration: 250ms;
+    user-select: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+  }
+}

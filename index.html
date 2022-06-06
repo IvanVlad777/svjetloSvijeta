@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@200;700&display=swap"
+      rel="stylesheet"
+    />
+    <script defer src="data/allData.js"></script>
+    <script defer src="script.js"></script>
+    <!-- Style -->
+    <link rel="stylesheet" href="style.css" />
+    <title>Svjetlo Svijeta</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="title">
+        <div class="main_title">Svjetlo Svijeta</div>
+        <div class="sub_title">Katolička pitanja i odgovori</div>
+      </div>
+
+      <div class="main_links">
+        <div class="link_big" data-type="dogmatics">Dogmatika</div>
+        <div class="link_big" data-type="moral">Moral</div>
+        <div class="link_big" data-type="history">Povijest</div>
+        <div class="link_big" data-type="scripture">Sveto Pismo</div>
+      </div>
+
+      <div class="content_tabs hidden" data-name="dogmatics">
+        <div class="content_list dogmatics_list"></div>
+        <div class="content_expanded"></div>
+      </div>
+      <div class="content_tabs hidden" data-name="moral">
+        <div class="content_list moral_list"></div>
+        <div class="content_expanded"></div>
+      </div>
+      <div class="content_tabs hidden" data-name="history">
+        <div class="content_list history_list"></div>
+        <div class="content_expanded"></div>
+      </div>
+      <div class="content_tabs hidden" data-name="scripture">
+        <div class="content_list scripture_list"></div>
+        <div class="content_expanded"></div>
+      </div>
+
+      <div class="impressum hidden">O nama</div>
+    </div>
+  </body>
+</html>
